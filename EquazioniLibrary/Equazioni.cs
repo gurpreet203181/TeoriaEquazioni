@@ -53,5 +53,18 @@ namespace EquazioniLibrary
 
             return impossibile;
         }
+        static public bool  controllo_equazione(double a)
+        {
+            bool controllo = false;
+
+
+            if (a != 0 )
+            {
+                controllo = true;
+            }
+
+
+            return controllo;
+        }
     }
 }

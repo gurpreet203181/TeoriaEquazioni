@@ -36,5 +36,18 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(risposta_attesa, test);
 
         }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            double a = 3;
+            bool risposta_attesa = true;
+            bool test = EquazioniLibrary.Equazioni.controllo_equazione(a);
+
+            Assert.AreEqual(risposta_attesa, test);
+
+        }
+
+
+
     }
 }
