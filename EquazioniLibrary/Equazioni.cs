@@ -53,7 +53,7 @@ namespace EquazioniLibrary
 
             return impossibile;
         }
-        static public bool  controllo_equazione(double a)
+        static public bool  Isdegree2(double a)
         {
             bool controllo = false;
 
@@ -65,6 +65,14 @@ namespace EquazioniLibrary
 
 
             return controllo;
+        }
+
+        static public double Delta(double a,double b,double c)
+        {
+            double calcolo = (b * b) - 4 * a * c;
+            
+            return calcolo;
+            
         }
     }
 }

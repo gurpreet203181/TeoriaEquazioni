@@ -41,12 +41,21 @@ namespace EquazioniLibrary.Test
         {
             double a = 3;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.controllo_equazione(a);
+            bool test = EquazioniLibrary.Equazioni.Isdegree2(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            double a = 0, b = 5, c=2 ; 
+           double risposta_attesa = 25;
+            double test = EquazioniLibrary.Equazioni.Delta(a,b,c);
 
+            Assert.AreEqual(risposta_attesa, test);
+
+        }
 
 
     }
