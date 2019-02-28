@@ -22,6 +22,36 @@ namespace EquazioniLibrary
             }
 
             return determinato;
+
+        }
+
+
+        static public bool IsInconsisted(double a,double b)
+        {
+            bool impossibile=false;
+
+            if (a==0 && b!=0)
+            {
+                impossibile = true;
+
+            }
+          
+           
+
+            return impossibile;
+        }
+        static public bool indeterminata(double a, double b)
+        {
+            bool impossibile=false;
+
+          
+            if (a == 0 && b == 0)
+            {
+                impossibile = true;
+            }
+
+
+            return impossibile;
         }
     }
 }
