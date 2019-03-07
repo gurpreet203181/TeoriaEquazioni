@@ -26,6 +26,7 @@ namespace EquazioniLibrary
         }
 
 
+        // metodo per vedere se impossible equazione
         static public bool IsInconsisted(double a,double b)
         {
             bool impossibile=false;
@@ -40,19 +41,27 @@ namespace EquazioniLibrary
 
             return impossibile;
         }
+
+
+
+        // metodo per vedere se indeterminata equazione
         static public bool indeterminata(double a, double b)
         {
-            bool impossibile=false;
+
+            bool indeterminata = false;
 
           
             if (a == 0 && b == 0)
             {
-                impossibile = true;
+                indeterminata = true;
             }
 
 
-            return impossibile;
+            return indeterminata;
         }
+
+
+        //controla se equazione è di secondo grado
         static public bool  Isdegree2(double a)
         {
             bool controllo = false;
@@ -67,12 +76,35 @@ namespace EquazioniLibrary
             return controllo;
         }
 
+
+
+        //calcolo delta 
         static public double Delta(double a,double b,double c)
         {
             double calcolo = (b * b) - 4 * a * c;
             
             return calcolo;
             
+        }
+
+
+
+
+        static public string EquationDegree(double a, double b)
+        {
+            string resultato = "";
+            if(indeterminata (a,  b)==true) resultato = "Indeterminato";
+            if(IsInconsisted( a, b)==true) resultato = "Impossibile";
+           
+           
+            if(resultato=="")
+            {
+                resultato = $"x={-b/a}";
+                
+
+            }
+
+            return resultato;
         }
     }
 }
