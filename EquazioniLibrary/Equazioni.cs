@@ -48,7 +48,7 @@ namespace EquazioniLibrary
         static public bool indeterminata(double a, double b)
         {
 
-            bool indeterminata = false;
+            bool indeterminata  = false;
 
           
             if (a == 0 && b == 0)
