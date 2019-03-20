@@ -8,7 +8,7 @@ namespace EquazioniLibrary
 {
     public class Equazioni
     {
-        static public bool IsDetermined(Double a)
+        static public bool Determinato(Double a)
         {
             bool determinato;
             if(a!=0)
@@ -27,7 +27,7 @@ namespace EquazioniLibrary
 
 
         // metodo per vedere se impossible equazione
-        static public bool IsInconsisted(double a,double b)
+        static public bool Impossible(double a,double b)
         {
             bool impossibile=false;
 
@@ -45,24 +45,24 @@ namespace EquazioniLibrary
 
 
         // metodo per vedere se indeterminata equazione
-        static public bool indeterminata(double a, double b)
+        static public bool Indeterminato(double a, double b)
         {
 
-            bool indeterminata  = false;
+            bool indeterminato  = false;
 
           
             if (a == 0 && b == 0)
             {
-                indeterminata = true;
+                indeterminato = true;
             }
 
 
-            return indeterminata;
+            return indeterminato;
         }
 
 
         //controla se equazione è di secondo grado
-        static public bool  Isdegree2(double a)
+        static public bool  Controlo(double a)
         {
             bool controllo = false;
 
@@ -90,21 +90,22 @@ namespace EquazioniLibrary
 
 
 
-        static public string EquationDegree(double a, double b)
+        static public string Equazione(double a, double b)
         {
-            string resultato = "";
-            if(indeterminata (a,  b)==true) resultato = "Indeterminato";
-            if(IsInconsisted( a, b)==true) resultato = "Impossibile";
+            string risultato = "";
+            if(Indeterminato(a,  b)==true) risultato = "Indeterminato";
+            if(Impossible( a, b)==true) risultato = "Impossibile";
            
            
-            if(resultato=="")
+            if(risultato=="")
             {
-                resultato = $"x={-b/a}";
+                risultato = $"x={-b/a}";
                 
 
             }
 
-            return resultato;
+            return risultato;
         }
     }
 }
+

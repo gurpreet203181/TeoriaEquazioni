@@ -7,31 +7,31 @@ namespace EquazioniLibrary.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void IsDetermined1()
+        public void Determinato1()
         {
             double a = 0;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.IsDetermined(a);
+            bool test = EquazioniLibrary.Equazioni.Determinato(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void IsDetermined2()
+        public void Determinato2()
         {
             double a = 2;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.IsDetermined(a);
+            bool test = EquazioniLibrary.Equazioni.Determinato(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void IsDetermined3()
+        public void Determinato3()
         {
             double a = -1;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.IsDetermined(a);
+            bool test = EquazioniLibrary.Equazioni.Determinato(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -40,41 +40,41 @@ namespace EquazioniLibrary.Test
 
 
         [TestMethod]
-        public void IsInconsisted()
+        public void Impossible1()
         {
-            double a = 0, b=3;
+            double a = 0, b = 3;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.IsInconsisted(a,b);
+            bool test = EquazioniLibrary.Equazioni.Impossible(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void IsInconsisted2()
+        public void Impossible2()
         {
             double a = 3, b = 0;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.IsInconsisted(a, b);
+            bool test = EquazioniLibrary.Equazioni.Impossible(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void IsInconsisted3()
+        public void Impossible()
         {
             double a = 0, b = 0;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.IsInconsisted(a, b);
+            bool test = EquazioniLibrary.Equazioni.Impossible(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void IsInconsisted4()
+        public void Impossible4()
         {
             double a = 3, b = 3;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.IsInconsisted(a, b);
+            bool test = EquazioniLibrary.Equazioni.Impossible(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -84,42 +84,42 @@ namespace EquazioniLibrary.Test
 
 
         [TestMethod]
-        public void indeterminata1()
+        public void Indeterminato1()
         {
             double a = 0, b = 0;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.indeterminata(a, b);
+            bool test = EquazioniLibrary.Equazioni.Indeterminato(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
 
         [TestMethod]
-        public void indeterminata2()
+        public void Indeterminato2()
         {
             double a = 2, b = 0;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.indeterminata(a, b);
+            bool test = EquazioniLibrary.Equazioni.Indeterminato(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void indeterminata3()
+        public void Indeterminato3()
         {
             double a = 0, b = 2;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.indeterminata(a, b);
+            bool test = EquazioniLibrary.Equazioni.Indeterminato(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void indeterminata4()
+        public void Indeterminato4()
         {
             double a = 2, b = 2;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.indeterminata(a, b);
+            bool test = EquazioniLibrary.Equazioni.Indeterminato(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -130,32 +130,32 @@ namespace EquazioniLibrary.Test
 
 
         [TestMethod]
-        public void grado1()
+        public void Controlo1()
         {
             double a = 3;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.Isdegree2(a);
+            bool test = EquazioniLibrary.Equazioni.Controlo(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
 
         [TestMethod]
-        public void grado2()
+        public void Controlo2()
         {
             double a = 0;
             bool risposta_attesa = false;
-            bool test = EquazioniLibrary.Equazioni.Isdegree2(a);
+            bool test = EquazioniLibrary.Equazioni.Controlo(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
-        public void grado3()
+        public void Controlo3()
         {
             double a = -1;
             bool risposta_attesa = true;
-            bool test = EquazioniLibrary.Equazioni.Isdegree2(a);
+            bool test = EquazioniLibrary.Equazioni.Controlo(a);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -163,15 +163,15 @@ namespace EquazioniLibrary.Test
 
 
 
-        
+
 
 
         [TestMethod]
         public void Delta1()
         {
-            double a = 0, b = 5, c=2 ; 
-           double risposta_attesa = 25;
-            double test = EquazioniLibrary.Equazioni.Delta(a,b,c);
+            double a = 0, b = 5, c = 2;
+            double risposta_attesa = 25;
+            double test = EquazioniLibrary.Equazioni.Delta(a, b, c);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -208,34 +208,34 @@ namespace EquazioniLibrary.Test
         }
         [TestMethod]
 
-        public void EquationDegree1()
+        public void Equazione1()
         {
             double a = 0, b = 0;
             string risposta_attesa = "Indeterminato";
-            string test = EquazioniLibrary.Equazioni.EquationDegree(a, b);
+            string test = EquazioniLibrary.Equazioni.Equazione(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
 
-        public void EquationDegree2()
+        public void Equazione2()
         {
             double a = 0, b = 3;
             string risposta_attesa = "Impossibile";
-            string test = EquazioniLibrary.Equazioni.EquationDegree(a, b);
+            string test = EquazioniLibrary.Equazioni.Equazione(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
         [TestMethod]
 
-        public void EquationDegree3()
+        public void Equazione3()
         {
             double a = 1, b = 3;
-          
+
             string risposta_attesa = $"x={-3}";
-            string test = EquazioniLibrary.Equazioni.EquationDegree(a, b);
+            string test = EquazioniLibrary.Equazioni.Equazione(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
@@ -243,19 +243,19 @@ namespace EquazioniLibrary.Test
 
         [TestMethod]
 
-        public void EquationDegree4()
+        public void Equazione4()
         {
             double a = 1, b = -3;
-           
+
             string risposta_attesa = $"x={3}";
-            string test = EquazioniLibrary.Equazioni.EquationDegree(a  , b);
+            string test = EquazioniLibrary.Equazioni.Equazione(a, b);
 
             Assert.AreEqual(risposta_attesa, test);
 
         }
-       
 
-        
+
+
 
     }
 }
